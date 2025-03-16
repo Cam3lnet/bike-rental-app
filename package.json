@@ -1,0 +1,32 @@
+{
+  "name": "bike-rental-web",
+  "version": "1.0.0",
+  "description": "bike-rental-app/ ├── backend/              # Node.js + Express API server │   ├── models/           # MongoDB schemas │   ├── routes/           # API endpoints │   ├── controllers/      # Business logic │   └── utils/            # Helper functions (contract generation, etc.) ├── frontend/             # React.js web application │   ├── public/           # Static assets │   └── src/ │       ├── components/   # Reusable UI components │       ├── pages/        # Main application screens │       └── services/     # API integration └── docs/                 # Documentation",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Cam3lnet/bike-rental-app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Cam3lnet/bike-rental-app/issues"
+  },
+  "homepage": "https://github.com/Cam3lnet/bike-rental-app#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "mongoose": "^8.12.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  }
+}
