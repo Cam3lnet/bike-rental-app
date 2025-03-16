@@ -1,3 +1,19 @@
+bike-rental-app/
+├── backend/              # Node.js + Express API server
+│   ├── models/           # MongoDB schemas
+│   ├── routes/           # API endpoints
+│   ├── controllers/      # Business logic
+│   └── utils/            # Helper functions (contract generation, etc.)
+├── frontend/             # React.js web application
+│   ├── public/           # Static assets
+│   └── src/
+│       ├── components/   # Reusable UI components
+│       ├── pages/        # Main application screens
+│       └── services/     # API integration
+└── docs/                 # Documentation
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
