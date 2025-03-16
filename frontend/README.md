@@ -1,3 +1,5 @@
+
+## Directories schema
 bike-rental-app/
 ├── backend/              # Node.js + Express API server
 │   ├── models/           # MongoDB schemas
@@ -11,6 +13,16 @@ bike-rental-app/
 │       ├── pages/        # Main application screens
 │       └── services/     # API integration
 └── docs/                 # Documentation
+
+## Development Notes
+
+This project currently shows npm audit warnings for development dependencies. 
+These vulnerabilities are primarily in development packages and don't affect 
+the production build. We're tracking these issues and will update dependencies 
+as stable fixes become available.
+
+To address critical vulnerabilities when deploying to production, run:
+npm audit fix
 
 
 
