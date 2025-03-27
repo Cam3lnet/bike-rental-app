@@ -1,14 +1,17 @@
 const express = require('express');
 const router = express.Router();
 const Bike = require('../models/Bike');
+const verifyToken = require('../middleware/auth');
+const BikeController = require('../controllers/bikeController');
 
 // Get all bikes
-router.get('/', async (req, res) => {
+router.get('/bikes', async (req, res) => {
   try {
     const bikes = await Bike.find();
     res.json(bikes);
-  } catch (err) {
-    res.status(500).json({ message: err.message });
+  } catch (error) {
+    console.error('Error fetching bikes:', error);
+    res.status(500).json({ message: 'Failed to fetch bikes' });
   }
 });
 
@@ -47,4 +50,16 @@ router.delete('/:id', async (req, res) => {
   }
 });
 
+
+
+
+// Protected route example
+router.post('/bikes', verifyToken, validateBike, BikeController.createBike);
+
+// Other protected routes...
+router.put('/bikes/:id', verifyToken, BikeController.updateBike);
+router.delete('/bikes/:id', verifyToken, BikeController.deleteBike);
+
 module.exports = router;
+
+
